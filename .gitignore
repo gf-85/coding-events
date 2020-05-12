@@ -1,6 +1,5 @@
-# Changes to mock DB
+# Changes to mock db
 mock/db.minimal.json
-
 
 .DS_Store
 node_modules

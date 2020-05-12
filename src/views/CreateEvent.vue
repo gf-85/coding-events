@@ -20,8 +20,8 @@ export default {
   data() {
     return {
       event: {
-        title: ""
-      }
+        title: "",
+      },
     };
   },
   methods: {
@@ -32,8 +32,8 @@ export default {
       } catch (error) {
         console.error(error);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
