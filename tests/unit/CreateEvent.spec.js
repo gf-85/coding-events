@@ -1,9 +1,9 @@
 import { mount } from "@vue/test-utils";
 import CreateEvent from "@/views/CreateEvent.vue";
-import { createEvent } from "@/services/event-service.js";
+//import { createEvent } from "@/services/event-service.js";
 
-// Jest wizardry
-jest.mock("@/services/event-service.js");
+//Jest wizardry
+//jest.mock("@/services/event-service.js");
 
 describe("CreateEvent", () => {
   test("it has an <h1> heading", () => {
@@ -80,7 +80,7 @@ describe("CreateEvent", () => {
     expect(wrapper.vm.submit).toHaveBeenCalled();
   });
 
-  test("it should call the event service, after the user has input a title and hit submit", () => {
+  /*test("it should call the event service, after the user has input a title and hit submit", () => {
     createEvent.mockReset();
     const wrapper = mount(CreateEvent);
 
@@ -92,5 +92,5 @@ describe("CreateEvent", () => {
     wrapper.get("form").trigger("submit");
 
     expect(createEvent).toHaveBeenCalledWith({ title: "Go to the zoo" });
-  });
+  });*/
 });
