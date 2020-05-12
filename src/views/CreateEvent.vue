@@ -7,7 +7,6 @@
         type="text"
         name="title"
         placeholder="Add a Title"
-        value="Default title"
       />
       <input type="submit" value="Create" />
     </form>
@@ -26,15 +25,16 @@ export default {
     };
   },
   methods: {
-    submit() {
-      axios
-        .post("http://localhost:3000/events", this.event)
-        .then(response => {
-          console.log("created new event", response.data);
-        })
-        .catch(error => {
-          console.error(error);
-        });
+    async submit() {
+      try {
+        const res = await axios.post(
+          "http://localhost:3000/events",
+          this.event
+        );
+        console.log("Created new event", res.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
   }
 };
