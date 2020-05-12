@@ -1,3 +1,7 @@
+# Changes to mock DB
+mock/db.minimal.json
+
+
 .DS_Store
 node_modules
 /dist
